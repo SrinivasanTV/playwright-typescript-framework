@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
+import { users } from '../test-data/users';
 import { attachScreenshot } from '../utils/attachments';
 
 test.describe('Negative Login test', () => {
@@ -9,7 +10,7 @@ test.describe('Negative Login test', () => {
             const loginPage = new LoginPage(page);
 
             await loginPage.navigate();
-            await loginPage.login('invalid_user', 'wrong_password');
+            await loginPage.login(users.invalidUser.username, users.invalidUser.password);
 
             await expect(page.locator('[data-test="error"]'))
                 .toContainText('Username and password do not match');
