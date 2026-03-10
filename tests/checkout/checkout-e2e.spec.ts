@@ -4,8 +4,7 @@ import { CartPage } from '../../pages/CartPage';
 import { CheckoutPage } from '../../pages/CheckoutPage';
 import { attachScreenshot } from '../../utils/attachments';
 
-test.describe('Checkout – End to End', () => {
-
+test.describe('Checkout - End to End', () => {
   test('Logged-in user can complete purchase', async ({ loggedInPage }) => {
     const productsPage = new ProductsPage(loggedInPage);
     const cartPage = new CartPage(loggedInPage);
@@ -24,5 +23,4 @@ test.describe('Checkout – End to End', () => {
       await attachScreenshot(loggedInPage, 'Order completed');
     });
   });
-
 });

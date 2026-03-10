@@ -3,14 +3,14 @@ import { LoginPage } from '../pages/LoginPage';
 import { getEnv } from '../utils/env';
 
 /**
- * 1️⃣ Declare custom fixture types
+ * Declare custom fixture types.
  */
 type MyFixtures = {
   loggedInPage: Page;
 };
 
 /**
- * 2️⃣ Extend Playwright test with typed fixtures
+ * Extend Playwright test with typed fixtures.
  */
 export const test = base.extend<MyFixtures>({
   loggedInPage: async ({ page }, use) => {

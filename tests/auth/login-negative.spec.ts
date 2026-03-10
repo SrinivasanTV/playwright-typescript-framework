@@ -3,8 +3,7 @@ import { LoginPage } from '../../pages/LoginPage';
 import { users } from '../../test-data/users';
 import { attachScreenshot } from '../../utils/attachments';
 
-test.describe('Authentication – Negative', () => {
-
+test.describe('Authentication - Negative', () => {
   test('Invalid user cannot login', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
@@ -22,5 +21,4 @@ test.describe('Authentication – Negative', () => {
       await attachScreenshot(page, 'Login error');
     });
   });
-
 });
